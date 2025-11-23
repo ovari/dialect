@@ -396,12 +396,12 @@ class DialectWindow(Adw.ApplicationWindow):
                 detail = str(exc)
 
                 if isinstance(exc, RequestError):
-                    title = _("Couldn’t connect to the translation service")
-                    description = _("We can’t connect to the server. Please check for network issues.")
+                    title = _("Unable to connect to the translation service.")
+                    description = _("Unable to connect to the server. Please check for network issues.")
                     if self.provider["trans"].supports_instances:
                         description = _(
                             (
-                                "We can’t connect to the {service} instance “{url}“.\n"
+                                "Unable to connect to the {service} instance “{url}“.\n"
                                 "Please check for network issues or if the address is correct."
                             )
                         ).format(service=service, url=url)
