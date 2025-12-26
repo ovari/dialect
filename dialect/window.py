@@ -544,7 +544,7 @@ class DialectWindow(Adw.ApplicationWindow):
                     self.translate(text, src_lang, dest_lang)
             except GLib.Error as exc:
                 logging.error(exc)
-                self.send_notification(_("Unable to read selected text."))
+                self.send_notification(_("Unable to read the selected text."))
 
     def queue_selection_translation(self, src_lang: str | None, dest_lang: str | None):
         """Call `translate_selection` or queue it until the window is focused"""
